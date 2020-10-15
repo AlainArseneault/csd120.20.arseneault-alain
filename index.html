@@ -26,11 +26,11 @@
         </header>
         <main>
             <h1>Welcome to Alain's CSD120 Website!</h1>
-            <picture>
-                <source srcset="images/150.jpg" media="(max-width:600px)">
-                <source srcset="images/300.jpg">
-                <a href="https://imgur.com/gallery/5d9P7vl"><img src="images/300.jpg" alt="images/300.jpg"></img></a>
-            </picture>
+            <a href="images/original.jpg">
+                <img src="images/300.jpg" alt="A selfie of Alain"
+                    srcset="images/150.jpg 150w, images/300.jpg 300w"
+                    sizes="(max-width: 500px) 150px, 300px">
+            </a>
             <p>Hello, my name is Alain Arseneault, im 22 and enjoy gaming as a past time, typically this means i procrastinate frequently however I believe I've taken control of this</p>
             <p>This website will be the culmination of my learning over the next few months</p>
             <h2>My Favorite things</h2>
@@ -51,12 +51,11 @@
                 <cite><br>by : <span class="author">Paul Holmes</span></cite>
             </p>
             <h3>Public Domain Audiobook</h3>
-            <audio controls>
-                <source src="amodest.mp3">
-                <source src="http://www.archive.org/download//travel_collection_1908_librivox/travel_collection_1908_librivox_64kb_mp3.zip">
+            <audio src="amodest.mp3" controls>
+                <a href="http://www.archive.org/download//travel_collection_1908_librivox/travel_collection_1908_librivox_64kb_mp3.zip">Download the audiobook</a>
             </audio>
             <h3>YouTube Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5aUG2Pn-WDs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5aUG2Pn-WDs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </main>
         <footer>
             <hr>
@@ -66,10 +65,9 @@
             </blockquote>
             <p>&#169; 2020 <a href="mailto:alarseneault@hotmail.com?subject=Message%20from%20CSD120%20Website">Alain Arseneault</a></p>
             <picture>
-                <source srcset="images/sc-logo.svg" style="width: 70px;height: auto;">
-                <source srcset="images/sc-logo.png" media="(max-width:400px)">
-                <source srcset="images/sc-logo@1.5x.png" media="(max-width:800px)">
-                <img src="images/sc-logo@2x.png" alt="images/sc-logo@2x.png">
+                <source srcset="images/sc-logo.svg" type="image/svg+xml">
+                <img src="images/sc-logo.png" alt="Sault College logo" width="70"
+                    srcset="images/sc-logo.png, images/sc-logo@1.5x.png 1.5x, images/sc-logo@2x.png 2x">
             </picture>
             
         </footer>
