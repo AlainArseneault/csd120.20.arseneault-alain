@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Alain Arseneault">
+    <meta name="description" content="This is a website that will eventually be fully functioning at the end of the year">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csd120 - alain arseneault</title>
+</head>
+<style> 
+    table { border-collapse: collapse; } 
+    th,td { border: 1px solid rgba(0,0,0,0.2); } 
+</style>
+<body>
+    <div class="width-wrap">
+        <header id="top">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="links.html">Links</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Survey</h1>
+            	<form action="https://formspree.io/f/mjvprevn" method="POST">
+                <p>
+            		<label for="name">What is your name</label>
+  					<input type="text" name="name_field" id="name"  required><br>
+               	</p>
+                <p>
+                	<label for="email">What is your email?</label>
+                	<input type="email" name="email_field" id="email"  required><br>
+               	</p>
+                <p>    
+                	<label for="whole">What is the best whole number?</label>
+                	<input type="number" name="best_whole_number" id="whole" min="0"><br>
+                </p>
+                <p>
+             		<label for="best_day">What is the best whole number?</label>
+                	<input type="date" name="best_day" id="best_day" min="0"><br>
+                </p>
+                <p>
+                	<label for="best_bear">Which bear is best?</label>
+                	<select name="best_bear" id="best_bear" required>
+                    	<option value="null"></option>
+                    	<option value="black">Black</option>
+                        <option value="brown">Brown</option>
+                        <option value="care">Care</option>
+                        <option value="panda">Panda</option>
+                        <option value="polar">Polar</option>
+                        <option value="teddy">Teddy</option>
+                    </select>
+                </p>
+                <fieldset>
+                	<legend>Do you like radio buttons?</legend>
+                    
+                    <input type="radio" id="yes" name="q1" value="yes">
+                    <label for="yes">Yes</label>
+                    <br>
+                    <input type="radio" id="no" name="q1" value="no">
+                    <label for="no">No</label>
+                    <br>
+                    <input type="radio" id="maybe" name="q1" value="none_of_your_buisness" checked>
+                    <label for="no">None of your buisness</label>
+                </fieldset>
+                 <p>
+                 	<label for="meaning">What is the meaning of life?</label>
+                	<textarea placeholder="Enter Correct answer here" id="meaning" rows="4" cols="40"></textarea>
+                    
+                </p>
+                <label>
+            		<input type="submit" value="Send">
+            	</form>
+        </main>
+        <footer>
+            <hr>
+            <blockquote>"People say nothing is impossible, but I do nothing everyday."
+                <br>
+                <cite>&mdash;<span class="author">A.A. Milne</span></cite>
+            </blockquote>
+            <p>&#169; 2020 <a href="mailto:alarseneault@hotmail.com?subject=Message%20from%20CSD120%20Website">Alain Arseneault</a></p>
+            <picture>
+                <source srcset="images/sc-logo.svg" style="width: 70px;height: auto;">
+                <source srcset="images/sc-logo.png" media="(max-width:400px)">
+                <source srcset="images/sc-logo@1.5x.png" media="(max-width:800px)">
+                <img src="images/sc-logo@2x.png" alt="images/sc-logo@2x.png">
+            </picture>
+            
+        </footer>
+        <a href="#top" title="Back to top">◤</a>
+    </div>
+</body>
+</html>
