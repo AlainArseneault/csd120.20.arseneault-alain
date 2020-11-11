@@ -29,25 +29,25 @@
             <h1>Survey</h1>
             	<form action="https://formspree.io/f/mjvprevn" method="POST">
                     <p>
-            		    <label for="name">What is your name</label>
-  					    <input type="text" name="name_field" id="name"  required><br>
+            		    <label for="name">What is your name? <abbr title="required" aria-label="required">*</abbr></abbr></label>
+  					    <input type="text" name="name_field" id="name"  required>
                	    </p>
                     <p>
-                	    <label for="email">What is your email?</label>
-                	    <input type="email" name="email_field" id="email"  required><br>
+                	    <label for="email">What is your email? <abbr title="required" aria-label="required">*</abbr></label>
+                	    <input type="email" name="email_field" id="email"  required>
                	    </p>
                     <p>    
                 	    <label for="whole">What is the best whole number?</label>
-                	    <input type="number" name="best_whole_number" id="whole" min="0"><br>
+                	    <input type="number" name="best_whole_number" id="whole" min="1">
                     </p>
                     <p>
-             		    <label for="best_day">What is the best whole number?</label>
-                	    <input type="date" name="best_day" id="best_day"><br>
+             		    <label for="best_day">What is the best day?</label>
+                	    <input type="date" name="best_day" id="best_day">
                     </p>
                     <p>
-                	    <label for="best_bear">Which bear is best?</label>
+                	    <label for="best_bear">Which bear is best? <abbr title="required" aria-label="required">*</abbr></label>
                 	    <select name="best_bear" id="best_bear" required>
-                    	    <option value=""> </option>
+                    	    <option value="">&nbsp;</option>
                     	    <option value="black">Black</option>
                             <option value="brown">Brown</option>
                             <option value="care">Care</option>
@@ -59,22 +59,28 @@
                     <fieldset>
                 	    <legend>Do you like radio buttons?</legend>
                     
-                        <input type="radio" id="yes" name="Do_you_like_radio" value="yes">
-                        <label for="yes">Yes</label>
-                        <br>
-                        <input type="radio" id="no" name="Do_you_like_radio" value="no">
-                        <label for="no">No</label>
-                        <br>
-                        <input type="radio" id="maybe" name="Do_you_like_radio" value="none_of_your_buisness" checked>
-                        <label for="no">None of your buisness</label>
+                        <ul>
+                            <li>
+                                <input type="radio" id="yes" name="Do_you_like_radio" value="yes">
+                                <label for="yes">Yes</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="no" name="Do_you_like_radio" value="no">
+                                <label for="no">No</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="maybe" name="Do_you_like_radio" value="?" checked>
+                                <label for="maybe">None of your buisness</label>
+                            </li>
+                        </ul>
                     </fieldset>
                     <p>
                  	    <label for="meaning">What is the meaning of life?</label>
-                	    <textarea placeholder="Enter Correct answer here" id="meaning" rows="4" cols="40"></textarea>
+                	    <textarea placeholder="Enter Correct answer here" name="life_meaning" id="meaning" rows="5" cols="50"></textarea>
                     </p>
-                     <label>
-                        <input type="submit" value="Send">
-                    </label>
+                     <p>
+                        <button type="submit">Submit</button>
+                     </p>
             	</form>
         </main>
         <footer>
