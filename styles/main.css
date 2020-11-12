@@ -15,8 +15,11 @@ h1,h2,h3{
     color: rgb(19, 94, 94);
 }
 nav a{
-    border-top: 4px transparent rgb(0, 0, 0, 0.3);
+    border-top: 4px solid rgb(0, 0, 0, 0);
     color: #E4DFAF;
+    display: inline-block;
+    margin: -4px 1em 0;
+    padding: 1em 0 0.5em;
 }
 header{
     border-top: 4px solid rgb(0, 0, 0, 0.1);
@@ -27,8 +30,7 @@ header nav {
     margin: 0 2em 2em;
 }
 header li {
-    display: inline-block;
-    padding: 1em 1em 0.5em;
+    display: inline;
 }
 nav a:hover {
     border-top: 4px solid #135E5E;
@@ -51,21 +53,26 @@ footer hr {
     margin-top: 3em;
     margin-bottom: 2em;
     border: none;
+    border-bottom: 3px dotted rgba(0,0,0,0.5)
 }
 /*Table styling goes here*/
 th,td {
     padding: 0.3em 1em;
 }
 
-thead tr,tbody tr,tfoot tr {
+thead tr td,
+thead tr th,
+tbody tr th,
+tfoot tr th,
+tfoot tr td {
     background-color: rgb(0, 0, 0, 0.2);
 }
 
-tr {
+tr td {
     background-color: rgb(0, 0, 0, 0.05);
 }
 
-tr:nth-child(even) {
+tr:nth-child(even) td {
     background-color: rgba(0, 0, 0, 0.15);
 }
 /*box sizing stuff*/
@@ -88,7 +95,7 @@ label{
 fieldset label{
     display: inline;
 }
-input[type="submit"] {
+[type="submit"] {
     border: none;
     padding: 1em 3em;
     background-color: #2E5E4E;
