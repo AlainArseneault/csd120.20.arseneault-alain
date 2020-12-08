@@ -32,6 +32,7 @@
                     <li><a href="glossary.html">Glossary</a></li>
                     <li><a href="survey.html">Survey</a></li>
 					<li><a href="lorem.html">Lorem</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
                 </ul>
             </nav>
         </header>
@@ -41,7 +42,7 @@
 				<picture>
 					<source srcset="images/150.jpg" media="(max-width:600px)">
 					<source srcset="images/300.jpg">
-					<a href="https://imgur.com/gallery/5d9P7vl"><img src="images/300.jpg" alt="images/300.jpg"></img></a>
+					<a href="https://imgur.com/gallery/5d9P7vl"><img src="images/300.jpg" alt="images/300.jpg"></img><img src="paperclip.png" class="paperclip"></img></a>
 				</picture>
 				<p>Hello, my name is Alain Arseneault, im 22 and enjoy gaming as a past time, typically this means i procrastinate frequently however I believe I've taken control of this via keeping a schedule.</p>
 				<p>This website will be the culmination of my learning over the next few months</p>
@@ -89,30 +90,51 @@
 				</table>
 			</div>
             <h2>My Favorite things</h2>
-            <figure>
-                <a href="https://imgur.com/gallery/OJg6Jb6"><img src="images/puppy.jpg" width="200" alt="images/puppy.jpg"></a>
-                <figcaption>Fig.1 My Dog is my Favorite Thing</figcaption>
-            </figure>
-            <h3>Games</h3>
-            <ol class ="a">
-                <li>Rainbow Six : Siege</li>
-                <li>League of Legends</li>
-                <li>Dawn of War</li>
-            </ol>
-            <h3>Haiku</h3>
-            <p> Like crunchy cornflakes
-                <br> leaves rustle underfoot
-                <br>Beauty in decay
-                <cite><br>by : <span class="author">Paul Holmes</span></cite>
-            </p>
-            <h3>Public Domain Audiobook</h3>
-            <audio controls>
-                <source src="amodest.mp3">
-                <source src="http://www.archive.org/download//travel_collection_1908_librivox/travel_collection_1908_librivox_64kb_mp3.zip">
-            </audio>
-            <h3>YouTube Video</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5aUG2Pn-WDs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </main>
+			<div class="favorites">
+				<input type="radio" id="mydog" name="favorites" value="mydog" checked>
+				<label for="mydog"><h3>My Dog</h3></label>
+				<div>
+				<figure>
+					<a href="https://imgur.com/gallery/OJg6Jb6"><img src="images/puppy.jpg" width="200" alt="images/puppy.jpg"></a>
+					<figcaption>Fig.1 My Dog is my Favorite Thing</figcaption>
+				</figure>
+				</div>
+				<input type="radio" id="games" name="favorites" value="games">
+				<label for="games"><h3>Games</h3></label>
+				<div>
+					<ol class ="a">
+						<li>Rainbow Six : Siege</li>
+						<li>League of Legends</li>
+						<li>Dawn of War</li>
+					</ol>
+				</div>
+				<input type="radio" id="haiku" name="favorites" value="haiku">
+				<label for="haiku"><h3>Haiku</h3></label>
+				
+				<div>
+					<p> Like crunchy cornflakes
+						<br> leaves rustle underfoot
+						<br>Beauty in decay
+						<cite><br>by : <span class="author">Paul Holmes</span></cite>
+					</p>
+				</div>
+				<input type="radio" id="book" name="favorites" value="book">
+				<label for="book"><h3>Public Domain Audiobook</h3></label>
+				
+				<div>
+					<audio controls>
+						<source src="amodest.mp3">
+						<source src="http://www.archive.org/download//travel_collection_1908_librivox/travel_collection_1908_librivox_64kb_mp3.zip">
+					</audio>
+				</div>
+				<input type="radio" id="video" name="favorites" value="video">
+				<label for="video"><h3>YouTube Video</h3></label>
+				
+				<div>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/5aUG2Pn-WDs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</main>
         <footer>
             <hr>
             <blockquote>"People say nothing is impossible, but I do nothing everyday."
@@ -128,7 +150,7 @@
             </picture>
             
         </footer>
-        <a href="#top" title="Back to top">◤</a>
+        <a href="#top" class="top" title="Back to top" >◤</a>
     </div>
 </body>
 </html>
