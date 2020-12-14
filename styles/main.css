@@ -10,8 +10,10 @@
 img{
 	max-width: 100%
 }
+
 a.bio{
-	display:block;
+	display:inline-block;
+	position: relative;
 }
 
 .bio img{
@@ -23,12 +25,12 @@ img.paperclip {
 	position: absolute;
 	background-color: rgba(0,0,0,0);
 	box-shadow:0px 0px;
-	left:470px;
-	top: 105px;
-	width: 7%;
+	left:20%;
+	top: 15%;
+
 }
 fieldset{
-	padding=0;
+	padding: 0;
 	list-style-type: none;
 }
 body{
@@ -65,7 +67,7 @@ header nav {
     margin: 0 2em 2em;
 }
 header li {
-	font-weight=900;
+	font-weight:900;
     padding: 1em 1em 0.5em;
 	list-style-type: none;
 }
@@ -156,7 +158,7 @@ input:valid {
     background-color: #B3C0AE;
 }
 .bio {
-	column-count:3;
+	column-width:13em;
 }
 .favorites{
 	display:flex;
@@ -164,18 +166,22 @@ input:valid {
 }
 .gallery{
 	display:grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: repeat(auto, minmax(180px, 1fr));
 	grid-column-gap:10px;
 	grid-row-gap:10px;
 }
-.gallery a{
-	size:1.1;
-}
+
 .gallery img{
 	display:block;
 	width:100%;
 	height:100%;
-	object-fit:cover:
+	object-fit:cover;
+}
+.gallery a:hover {
+    transform: scale(1.1, 1.1);
+}
+.gallery a {
+    transition: transform 200ms;
 }
 .rowspan2{
 	grid-row: 1 / span 2;
@@ -209,7 +215,8 @@ a.top{
 	margin-left:-25px;
 	display:inline-block;
 }
-a:hover:last-child{
+a.top:hover{
+	transition: transform 200ms;
 	text-decoration : none;
 	text-shadow:2px 2px;
 	transform: rotate(45deg);
@@ -223,4 +230,128 @@ input[type="radio"]:checked + label{
 	text-decoration:underline;
 	background-color: rgb(100,165,165);
 }
+/*lab 8 stuff */
+@media screen and (max-width: 450px) {
+    .gallery .col-span-2 {
+        grid-column: span 1;
+    }
+}
+@media screen and (max-width: 520px) {
 
+    .bio table+thead,
+    tfoot,
+    th {
+        display: none;
+    }
+    .bio table td {
+        display: block;
+        padding: 0 1rem;
+    }
+    .bio table {
+        caption-side: top;
+    }
+    .bio table tr td:first-of-type {
+        padding-top: 0.3em;
+        font-weight: bold;
+    }
+    .bio table tr td:last-of-type {
+        padding-bottom: 0.3em;
+        font-size: 0.8em;
+    }
+    .bio table tr td:last-of-type::after {
+        content: " hrs/wk";
+    }
+}
+@media screen and (max-width: 850px) {
+    .favourites {
+        flex-direction: column;
+    }
+    .favourites input+label {
+        order: 0;
+    }
+    .favourites input+label>h3 {
+        border-bottom: 3px solid rgb(0, 0, 0, 0);
+        margin-bottom: 0;
+    }
+    .favourites input+label>h3:hover {
+        border-top: 5px solid black;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 725px) {
+    #top ul {
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        transition: height 500ms;
+        overflow: hidden;
+    }
+    #top a {
+        padding-top: 0.5em;
+        border-top: none;
+    }
+    #top a:hover {
+        border-top: none;
+        text-decoration: underline;
+    }
+    #menu-toggle {
+        display: none;
+    }
+    .sandwich-icon {
+        display: block;
+        width: 40px;
+        height: 25px;
+        border-top: 5px solid black;
+        margin: 1em auto;
+        transition: border-top 200ms;
+    }
+    .sandwich-icon:hover {
+        cursor: pointer;
+    }
+    .sandwich-icon::after,
+    .sandwich-icon::before {
+        content: "";
+        display: block;
+        width: 40px;
+        border-top: 5px solid black;
+        position: absolute;
+        transition: transform 200ms;
+    }
+    .sandwich-icon label {
+        position: relative;
+    }
+    .sandwich-icon::before {
+        top: 10px;
+    }
+    .sandwich-icon::after {
+        top: 30px;
+    }
+    #top input[type=checkbox]:checked+label+ul {
+        height: 200px !important;
+        overflow: visible !important;
+        transition: height 200ms;
+    }
+    #top input[type=checkbox]:checked+.sandwich-icon {
+        border-top: 5px solid transparent;
+        transition: border-top 200ms;
+    }
+    #top input[type=checkbox]:checked+.sandwich-icon::before {
+        border-top: 5px solid black;
+        transform: rotate(45deg);
+        top: 30px;
+    }
+
+    #top input[type=checkbox]:checked+.sandwich-icon::after {
+        border-top: 5px solid black;
+        transform: rotate(-45deg)
+
+    }
+}
+@media screen and (min-width: 726px) {
+    #top nav input:first-of-type {
+        display: none;
+    }
+    .sandwich-icon {
+        display: block;
+    }
+}
