@@ -11,7 +11,7 @@ img{
 	max-width: 100%
 }
 
-a.bio{
+.bio a {
 	display:inline-block;
 	position: relative;
 }
@@ -160,7 +160,7 @@ input:valid {
 .bio {
 	column-width:13em;
 }
-.favorites{
+.favourites{
 	display:flex;
 	flex-wrap: wrap;
 }
@@ -184,20 +184,20 @@ input:valid {
     transition: transform 200ms;
 }
 .rowspan2{
-	grid-row: 1 / span 2;
+	grid-row: span 2;
 }
 .colspan2{
-	grid-column: 1 / span 2;
+	grid-column: span 2;
 }
-.favorites div{
+.favourites div{
 	display:none;
 	order:2;
 }
-.favorites input[type="radio"]:checked + label +div{
+.favourites input[type="radio"]:checked + label +div{
 	display:flex;
 	width:100%
 }
-.favorites label{
+.favourites label{
 	order: -1;
 }
 
@@ -213,10 +213,10 @@ a.top{
 	position:sticky;
 	bottom:10px;
 	margin-left:-25px;
-	display:inline-block;
+    display:inline-block;
+	transition: transform 200ms;
 }
 a.top:hover{
-	transition: transform 200ms;
 	text-decoration : none;
 	text-shadow:2px 2px;
 	transform: rotate(45deg);
@@ -236,18 +236,21 @@ input[type="radio"]:checked + label{
         grid-column: span 1;
     }
 }
+.bio table caption {
+    caption-side: bottom;
+}
 @media screen and (max-width: 520px) {
 
-    .bio table+thead,
-    tfoot,
-    th {
+    .bio table thead,
+    .bio table tfoot,
+    .bio table th {
         display: none;
     }
     .bio table td {
         display: block;
         padding: 0 1rem;
     }
-    .bio table {
+    .bio table caption {
         caption-side: top;
     }
     .bio table tr td:first-of-type {
@@ -256,6 +259,7 @@ input[type="radio"]:checked + label{
     }
     .bio table tr td:last-of-type {
         padding-bottom: 0.3em;
+        font-style: italic;
         font-size: 0.8em;
     }
     .bio table tr td:last-of-type::after {
@@ -304,6 +308,7 @@ input[type="radio"]:checked + label{
         border-top: 5px solid black;
         margin: 1em auto;
         transition: border-top 200ms;
+        position: relative;
     }
     .sandwich-icon:hover {
         cursor: pointer;
@@ -321,13 +326,13 @@ input[type="radio"]:checked + label{
         position: relative;
     }
     .sandwich-icon::before {
-        top: 10px;
+        top: 5px;
     }
     .sandwich-icon::after {
-        top: 30px;
+        top: 15px;
     }
     #top input[type=checkbox]:checked+label+ul {
-        height: 200px !important;
+        height: 300px !important;
         overflow: visible !important;
         transition: height 200ms;
     }
@@ -337,13 +342,13 @@ input[type="radio"]:checked + label{
     }
     #top input[type=checkbox]:checked+.sandwich-icon::before {
         border-top: 5px solid black;
-        transform: rotate(45deg);
+        transform: rotate(45deg) translate(-20px, -10px);
         top: 30px;
     }
 
     #top input[type=checkbox]:checked+.sandwich-icon::after {
         border-top: 5px solid black;
-        transform: rotate(-45deg)
+        transform: rotate(-45deg) translate(0px, -10px);
 
     }
 }

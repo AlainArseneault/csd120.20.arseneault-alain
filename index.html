@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style> 
-        table { border-collapse: collapse; } 
-        th,td { border: 1px solid rgba(0,0,0,0.2); } 
-    </style>
 <head>
+	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
@@ -17,7 +14,6 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="author" content="Alain Arseneault">
     <meta name="description" content="This is a website that will eventually be fully functioning at the end of the year">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>csd120 - alain arseneault</title>
 </head>
@@ -27,7 +23,7 @@
         <header id="top">
             <nav>
 				<input type="checkbox" name="burger" id="menu-toggle" />
-				<label class="sandwich-icon"for="menu-toggle">
+				<label class="sandwich-icon" for="menu-toggle">
 				</label>
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -45,11 +41,12 @@
 				<picture>
 					<source srcset="images/150.jpg" media="(max-width:600px)">
 					<source srcset="images/300.jpg">
-					<a href="https://imgur.com/gallery/5d9P7vl"><img src="images/300.jpg" alt="images/300.jpg"></img><img src="paperclip.png" class="paperclip"></img></a>
+					<a href="https://imgur.com/gallery/5d9P7vl"><img src="images/300.jpg" alt="images/300.jpg"><img src="paperclip.png" class="paperclip"></a>
 				</picture>
 				<p>Hello, my name is Alain Arseneault, im 22 and enjoy gaming as a past time, typically this means i procrastinate frequently however I believe I've taken control of this via keeping a schedule.</p>
 				<p>This website will be the culmination of my learning over the next few months</p>
 				<table>
+					<caption>My Courses</caption>
 					<thead>
 						<tr>
 							<th rowspan="2">Term</th>
@@ -93,7 +90,7 @@
 				</table>
 			</div>
             <h2>My Favorite things</h2>
-			<div class="favorites">
+			<div class="favourites">
 				<input type="radio" id="mydog" name="favorites" value="mydog" checked>
 				<label for="mydog"><h3>My Dog</h3></label>
 				<div>
@@ -146,7 +143,7 @@
             </blockquote>
             <p>&#169; 2020 <a href="mailto:alarseneault@hotmail.com?subject=Message%20from%20CSD120%20Website">Alain Arseneault</a></p>
             <picture>
-                <source srcset="images/sc-logo.svg" media="(max-width:400px)"style="width: 70px;height: auto;">
+                <source srcset="images/sc-logo.svg" media="(max-width:400px)" style="width: 70px;height: auto;">
                 <source srcset="images/sc-logo.png" media="(max-width:400px)">
                 <source srcset="images/sc-logo@1.5x.png" media="(max-width:800px)">
                 <img src="images/sc-logo@2x.png" alt="images/sc-logo@2x.png">
